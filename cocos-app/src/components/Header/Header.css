@@ -1,0 +1,76 @@
+@import url(../../variables.css);
+@import url(../../assets/fonts/fonts.css);
+
+header {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(./../../assets/header-bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header__top-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 36px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 800px;
+    width: 100%;
+}
+
+.header__login-button {
+    color: var(--white);
+    padding: 8px 34px;
+    background: var(--red);
+    border: 1px solid var(--red);
+    transition: all .5s ease;
+
+    &:hover {
+        background: rgba(0, 0, 0, 0);
+        transition: all .5s ease;
+        color: var(--red);
+    }
+}
+
+.header__content {
+    margin-top: 200px;
+}
+
+.header__title {
+    font-family: "SF Pro";
+    font-weight: 900;
+    font-size: 82px;
+    color: var(--white);
+}
+
+.header__text {
+    max-width: 904px;
+    margin-top: 22px;
+    color: var(--text-gray);
+    font-family: Geist;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.header__button {
+    display: inline-block;
+    margin-top: 90px;
+    padding: 22px 100px;
+    background: var(--yellow);
+    color: var(--brown);
+    border: 1px solid var(--yellow);
+    transition: all .5s ease;
+
+    &:hover {
+        background: rgba(0, 0, 0, 0);
+        color: var(--yellow);
+        transition: all .5s ease;
+    }
+}
