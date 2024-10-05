@@ -1,0 +1,8 @@
+SQLAlchemy
+uvicorn
+FastAPI
+python-dotenv
+pds_tools
+ultralytics
+pydantic
+rembg
