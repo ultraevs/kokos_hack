@@ -13,6 +13,7 @@ body {
   font-family: 'Geist';
   color: var(--gray);
   font-size: 20px;
+  background: var(--main-bg);
 }
 
 a {
@@ -27,6 +28,14 @@ a {
   padding: 0 30px;
 }
 
-.login-button {
-  margin: 10px 36px;
+section {
+  margin-top: var(--section-margin);
+}
+
+.section-title {
+  font-family: "SF Pro";
+  font-weight: 900;
+  text-align: center;
+  font-size: var(--section-title-size);
+  color: var(--white);
 }

@@ -5,6 +5,12 @@
 }
 
 @font-face {
+    font-family: 'Geist';
+    font-weight: 500;
+    src: url(./geist/Geist-Medium.ttf);
+}
+
+@font-face {
     font-family: 'SF Pro';
     font-weight: 400;
     src: url(./sf-pro/SFProDisplay-Regular.ttf);

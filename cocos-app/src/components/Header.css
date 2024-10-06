@@ -1,10 +1,10 @@
-@import url(../../variables.css);
-@import url(../../assets/fonts/fonts.css);
+@import url(../variables.css);
+@import url(../assets/fonts/fonts.css);
 
 header {
     height: 100vh;
     width: 100vw;
-    background-image: url(./../../assets/header-bg.jpg);
+    background-image: url(./../assets/header-bg.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -23,6 +23,15 @@ nav {
     align-items: center;
     max-width: 800px;
     width: 100%;
+}
+
+nav a {
+    transition: color 0.5s ease;
+
+    &:hover {
+        color: var(--white);
+        transition: color 0.5s ease;
+    }
 }
 
 .header__login-button {
@@ -73,4 +82,9 @@ nav {
         color: var(--yellow);
         transition: all .5s ease;
     }
+}
+
+
+.login-button {
+    margin: 10px 36px;
 }

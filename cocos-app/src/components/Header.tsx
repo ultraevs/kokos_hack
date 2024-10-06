@@ -1,7 +1,6 @@
 import React from "react";
 import NavPanel from "./NavPanel";
-import smallLogo from "./../../assets/small-logo.svg";
-import LinkComponent from "./LinkComponent";
+import smallLogo from "../assets/small-logo.svg";
 import "./Header.css";
 
 const Header = () => {
@@ -21,11 +20,9 @@ const Header = () => {
                         клуба! Ознакомьтесь с последними новостями, профилями
                         игроков и турнирной таблицей ваших любимых команд.
                     </p>
-                    <LinkComponent
-                        link="#"
-                        content="button"
-                        classes="header__button"
-                    />
+                    <a href="##" className="header__button">
+                        button
+                    </a>
                 </div>
             </div>
         </header>
