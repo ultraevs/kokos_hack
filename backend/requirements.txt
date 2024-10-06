@@ -2,7 +2,11 @@ SQLAlchemy
 uvicorn
 FastAPI
 python-dotenv
-pds_tools
+psd_tools
 ultralytics
 pydantic
 rembg
+pydantic[email]
+passlib
+psycopg2
+bcrypt

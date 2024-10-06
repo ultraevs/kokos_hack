@@ -1,5 +1,6 @@
-from .cardGenerator import Cards
+from cardGenerator import Cards
 import base64
+import cv2
 
 cards = Cards()
 
@@ -15,4 +16,4 @@ def base64_to_jpg(base64_str, output_path):
 
 base64_ = jpg_to_base64('app/services/human.jpg')
 card = cards.generate_card(base64_str=base64_, card_type='bronze', card_name='some human')
-base64_to_jpg(card, 'app/services/output_human.jpg')
+cv2.imwrite('app/services/card.jpg', card)

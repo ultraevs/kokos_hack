@@ -10,9 +10,7 @@ import os
 
 class Cards:
     def __init__(self):
-        #self.bronze_psd = PSDImage.open('app/assets/bronze.psd')
-        print(os.path.join(os.getcwd(), 'app/models/detect.pt'))
-        self.model = YOLO(os.path.join(os.getcwd(), 'app/models/detect.pt'))
+        self.model = YOLO('app/models/yolo/best.pt')
 
     def generate_card(self, base64_str, card_type, card_name):
         image = self.base64_to_cv2_img(base64_str)

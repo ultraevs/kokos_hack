@@ -5,10 +5,29 @@ from app.api.endpoints import users
 from app.db.base import Base
 from app.db.session import engine
 from app.services.cardGenerator import Cards
+import logging
+from logging.handlers import RotatingFileHandler
+import os
 
 app = FastAPI(docs_url="/v1/swagger", openapi_url="/v1/openapi.json")
 
-# cards = Cards()
+cards = Cards()
+
+log_dir = os.path.join(os.path.dirname(__file__), 'logs')
+os.makedirs(log_dir, exist_ok=True)
+
+log_file = os.path.join(log_dir, 'backend.log')
+handler = RotatingFileHandler(log_file)
+logging.basicConfig(handlers=[handler], level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+
+logger = logging.getLogger(__name__)
+
+@app.middleware("http")
+async def log_requests(request, call_next):
+    logger.info(f"Request: {request.method} {request.url}")
+    response = await call_next(request)
+    logger.info(f"Response: {response.status_code}")
+    return response
 
 def custom_openapi():
     if app.openapi_schema:
@@ -33,8 +52,8 @@ def read_items():
 
 @app.post('/generate_card/')
 def generate_card(image: ImageBase64):
-    card = cards.generate_card(image.image)
-    return card
+    #card = cards.generate_card(image.image)
+    return None
 
 Base.metadata.create_all(bind=engine)
 
