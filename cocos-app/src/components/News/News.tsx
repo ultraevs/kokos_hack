@@ -1,7 +1,7 @@
 import React from "react";
 import "./News.css";
-import NewsCard from "./NewsCard/NewsCard";
-import newsBG from "../assets/news-card-bg.jpg";
+import NewsCard from "../NewsCard/NewsCard";
+import newsBG from "../../assets/news-card-bg.jpg";
 
 interface newsNode {
     date: Date;
@@ -12,21 +12,21 @@ interface newsNode {
 
 const newsDate: Array<newsNode> = [
     {
-        date: new Date("01-10-2024"),
+        date: new Date("2024-10-01"),
         title: "Павел Погребняк дебютировал в Лиге F",
         description:
             "И сразу забил гол, послематчевый пенальти и принес команде первые очки!",
         background: newsBG,
     },
     {
-        date: new Date("01-10-2024"),
+        date: new Date("2024-10-01"),
         title: "Павел Погребняк дебютировал в Лиге F",
         description:
             "И сразу забил гол, послематчевый пенальти и принес команде первые очки!",
         background: newsBG,
     },
     {
-        date: new Date("01-10-2024"),
+        date: new Date("2024-10-01"),
         title: "Павел Погребняк дебютировал в Лиге F",
         description:
             "И сразу забил гол, послематчевый пенальти и принес команде первые очки!",
@@ -52,7 +52,7 @@ const News = () => {
                         )),
                     ]}
                 </div>
-                <a href="##" className="news-button">
+                <a href="##" className="news-button orange-button">
                     К новостям
                 </a>
             </div>

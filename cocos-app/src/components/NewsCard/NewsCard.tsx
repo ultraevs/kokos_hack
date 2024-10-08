@@ -7,16 +7,18 @@ interface NewsCardProps {
     background: string;
 }
 
+export function getDate(date: Date): string {
+    const monthName = date.toLocaleString("ru-RU", { month: "short" });
+    let formattedDate = String(date.getDate()) + " " + monthName;
+    return formattedDate.slice(0, formattedDate.length - 1);
+}
+
 const NewsCard: FC<NewsCardProps> = ({
     date,
     title,
     description,
     background,
 }) => {
-    function getDate(date: Date): string {
-        const monthName = date.toLocaleString("ru-RU", { month: "short" });
-        return String(date.getDay()) + " " + monthName;
-    }
     return (
         <div className={classes.card}>
             <span className={classes.date}>{getDate(date)}</span>

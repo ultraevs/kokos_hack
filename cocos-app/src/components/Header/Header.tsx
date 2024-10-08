@@ -1,6 +1,6 @@
 import React from "react";
-import NavPanel from "./NavPanel";
-import smallLogo from "../assets/small-logo.svg";
+import NavPanel from "../NavPanel";
+import smallLogo from "../../assets/small-logo.svg";
 import "./Header.css";
 
 const Header = () => {
