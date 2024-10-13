@@ -1,0 +1,12 @@
+SQLAlchemy
+uvicorn
+FastAPI
+python-dotenv
+psd_tools
+ultralytics
+pydantic
+rembg
+pydantic[email]
+passlib
+psycopg2
+bcrypt
