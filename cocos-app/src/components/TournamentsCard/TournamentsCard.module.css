@@ -1,0 +1,53 @@
+@import url(../../variables.css);
+
+.card {
+    max-width: 365px;
+    height: 200px;
+    padding: 25px 0 25px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    flex: 1 1;
+    border: 1px solid var(--stroke);
+
+    span {
+        display: block;
+    }
+}
+
+span.goingNow {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+
+    &::after {
+        content: "";
+        display: block;
+        width: 4px;
+        height: 4px;
+        background: var(--red);
+        margin-left: 10px;
+        border-radius: 10px;
+    }
+}
+
+.dates {
+    margin-top: auto;
+    text-align: center;
+    width: 150px;
+    padding: 6px 0 6px;
+    background: var(--red);
+    color: var(--white);
+    font-size: 16px;
+    border-radius: 50px;
+}
+
+.name {
+    margin-top: 3px;
+    color: var(--white);
+    font-size: 26px;
+}
+
+.goNow {
+    justify-content: space-between;
+}

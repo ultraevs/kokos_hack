@@ -1,0 +1,55 @@
+@import url(../../variables.css);
+
+.team-slider-wrap {
+    div {
+        width: 100%;
+        height: 855px;
+        position: relative;
+        height: calc((100vw - 30px) * 0.56);
+
+        &:focus-visible {
+            outline: none !important;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+
+            &:focus-visible {
+                outline: none !important;
+            }
+        }
+
+        a {
+            position: absolute;
+            right: 35px;
+            bottom: 30px;
+            display: inline-block;
+            color: var(--white);
+            font-weight: 400;
+            padding: 10px 25px;
+            background: var(--red);
+            border: 1px solid var(--red);
+            transition: all .5s ease;
+
+            &:hover {
+                background: var(--white);
+                color: var(--red);
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .team-slider-wrap div {
+        height: 855px;
+    }
+}
+
+.slick-dots button::before {
+    color: var(--gray) !important;
+}
+
+.slick-dots {
+    bottom: -35px !important;
+}

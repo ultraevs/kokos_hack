@@ -1,0 +1,24 @@
+@import url(../../variables.css);
+
+.news_cards {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.orange-button {
+    display: block;
+    text-align: center;
+    margin: 50px auto 0;
+    padding: 13px 48px;
+    max-width: 220px;
+    color: var(--brown);
+    background: var(--orange);
+    transition: all 0.5s ease;
+    border: 1px solid var(--orange);
+
+    &:hover {
+        background: rgba(0, 0, 0, 0);
+        color: var(--orange);
+    }
+}
