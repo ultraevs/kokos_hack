@@ -1,0 +1,18 @@
+version: "3.3"
+
+services:
+  frontend:
+    build:
+      context: ../cocos-app/
+      dockerfile: Dockerfile
+    ports:
+      - "5179:5179"
+  backend:
+    build:
+      context: ../backend/
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      - DOCKER_MODE=1
+    ports:
+      - "8020:8020"
